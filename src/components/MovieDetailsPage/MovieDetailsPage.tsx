@@ -20,11 +20,11 @@ const MovieDetailsPage: FC<MovieDetailsPageProps> = () => {
 
   return (
     <div className={styles.MovieDetailsPage}>
-      <h1>{details.itle}</h1>
-      <h3>{details.tagLine}</h3>
+      <h1>{details?.title}</h1>
+      <h3>{details?.tagLine}</h3>
       <img
         src={`${imageUrlBase}${details?.poster_path}`}
-        alt={details.title}
+        alt={details?.title}
       ></img>
     </div>
   );

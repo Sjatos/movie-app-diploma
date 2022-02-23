@@ -55,7 +55,7 @@ export const fetchMoviesList = createAsyncThunk(
 
   export const fetchMoviesDetails = createAsyncThunk(
     'movies/fetchMoviesDetails',
-    async (id:number) => {
+    async (id:number | string) => {
       const responce = await fetch(`${baceUrl}/3/movie/${id}?api_key=${authToken}`)
         .then(res => res.json())
         .then(json => json);
@@ -142,6 +142,7 @@ const moviesSlice = createSlice({
       
     });
     builder.addCase(fetchMoviesDetails.fulfilled, (state, action) => {
+      
       state.currentMovie = {...action.payload};
     });
 
