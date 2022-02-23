@@ -1,3 +1,4 @@
+import { title } from "process";
 import React, { FC, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
@@ -9,7 +10,8 @@ interface MovieDetailsPageProps {}
 const MovieDetailsPage: FC<MovieDetailsPageProps> = () => {
   const { id }: any = useParams();
   const dispatch = useDispatch();
-  // const currentMovie = useSelector((state: any) => state.movies.currentMovie);
+  const details = useSelector((state: any) => state.movies.currentMovie);
+  const imageUrlBase = process.env.REACT_APP_BASE_IMAGE_URL;
 
   useEffect(() => {
     console.log(id);
@@ -18,7 +20,12 @@ const MovieDetailsPage: FC<MovieDetailsPageProps> = () => {
 
   return (
     <div className={styles.MovieDetailsPage}>
-      <h1>Hello</h1>
+      <h1>{details.itle}</h1>
+      <h3>{details.tagLine}</h3>
+      <img
+        src={`${imageUrlBase}${details?.poster_path}`}
+        alt={details.title}
+      ></img>
     </div>
   );
 };

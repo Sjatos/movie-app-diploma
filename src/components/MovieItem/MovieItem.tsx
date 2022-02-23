@@ -33,8 +33,6 @@ const MovieItem: FC<MovieItemProps> = (props: any) => {
             width={300}
             height={450}
             src={`${imageUrlBase}${img}`}
-            // src={`https://cringemdb.com/img/movie-poster-placeholder.png`}
-            // src={`${defaultImage}movie-poster-placeholder.png`}
             alt={title}
           ></img>
 

@@ -16,11 +16,18 @@ function App() {
       <Header />
 
       <Routes>
-        <Route path="/" element={<MovieListPage />} />
+        <Route
+          path="/"
+          element={
+            <>
+              <MovieListPage />
+              <Loader />
+            </>
+          }
+        />
         <Route path="/favorites" element={<FavoritesScreen />} />
-        <Route path="/movie/:id" element={<MovieDetailsPage />} />
+        <Route path="/movies/:id" element={<MovieDetailsPage />} />
       </Routes>
-      <Loader />
     </BrowserRouter>
   );
 }

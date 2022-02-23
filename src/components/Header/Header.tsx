@@ -30,13 +30,13 @@ const Header: FC<HeaderProps> = () => {
     <div className={styles.Header}>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">TOP MOVIES</Navbar.Brand>
+          <Navbar.Brand href="/">TOP MOVIES</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
               <Container className={styles.container}>
                 <Link to={"/"}>Home</Link>
-                <Link to={"/FavoritesScreen"}>Favorites</Link>
+                <Link to={"/favorites"}>Favorites</Link>
               </Container>
             </Nav>
             <Nav>

@@ -1,4 +1,10 @@
 .FavoritesScreen {
     background-color: black;
     color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 5em;
+   
 }
